@@ -34,9 +34,10 @@ return [
             'hostname' => env('REVERB_HOST'),
             'options' => [
                 'tls' => [
-                    'local_cert' => '/etc/letsencrypt/live/talentstutors.com/fullchain.pem',
-                    'local_pk' => '/etc/letsencrypt/live/talentstutors.com/privkey.pem',
-                    'cafile' => '/etc/letsencrypt/options-ssl-apache.conf',
+                    'local_cert' => env('REVERB_TLS_CERT'),
+                    'local_pk' => env('REVERB_TLS_PK'),
+                    'verify_peer' => env('REVERB_TLS_VERIFY_PEER', false),
+                    'allow_self_signed' => env('REVERB_TLS_ALLOW_SELF_SIGNED', true),
                 ],
             ],
             'max_request_size' => env('REVERB_MAX_REQUEST_SIZE', 10_000),
