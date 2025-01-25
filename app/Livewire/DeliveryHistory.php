@@ -22,6 +22,7 @@ class DeliveryHistory extends Component
     #[On('echo:delivery,PackageSent')]
     public function onPackageSent($event)
     {
+        dd($event);
         $this->packageStatuses[] = $event;
     }
 
