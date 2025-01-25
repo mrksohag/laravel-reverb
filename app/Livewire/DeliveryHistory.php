@@ -15,11 +15,7 @@ class DeliveryHistory extends Component
 
     public function submitStatus()
     {
-        broadcast(new PackageSent(
-            deliveryPersonnel: 'John Doe',
-            deliveryStatus: $this->status,
-            deliveryTime: Carbon::now()->toTimeString()
-        ));
+        PackageSent::dispatch('mizan', $this->status, Carbon::now());
         $this->reset('status');
     }
 
