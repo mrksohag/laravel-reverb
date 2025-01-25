@@ -33,11 +33,7 @@ return [
             'port' => env('REVERB_SERVER_PORT', 8080),
             'hostname' => env('REVERB_HOST'),
             'options' => [
-                'tls' => [
-                    // 'local_cert' => '/etc/letsencrypt/live/talentstutors.com/fullchain.pem',
-                    // 'local_pk' => '/etc/letsencrypt/live/talentstutors.com/privkey.pem',
-                    // 'cafile' => '/etc/letsencrypt/options-ssl-apache.conf',
-                ],
+                'tls' => [],
             ],
             'max_request_size' => env('REVERB_MAX_REQUEST_SIZE', 10_000),
             'scaling' => [
