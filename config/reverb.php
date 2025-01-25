@@ -34,8 +34,8 @@ return [
             'hostname' => env('REVERB_HOST'),
             'options' => [
                 'tls' => [
-                    'local_cert' => '/etc/letsencrypt/live/talentstutors.com/fullchain.pem',
-                    'local_pk' => '/etc/letsencrypt/live/talentstutors.com/privkey.pem',
+                    // 'local_cert' => '/etc/letsencrypt/live/talentstutors.com/fullchain.pem',
+                    // 'local_pk' => '/etc/letsencrypt/live/talentstutors.com/privkey.pem',
                     // 'cafile' => '/etc/letsencrypt/options-ssl-apache.conf',
                 ],
             ],
