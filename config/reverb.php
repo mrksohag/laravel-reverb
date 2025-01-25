@@ -34,8 +34,8 @@ return [
             'hostname' => env('REVERB_HOST'),
             'options' => [
                 'tls' => [
-                    'local_cert' => env('REVERB_TLS_CERT'),
-                    'local_pk' => env('REVERB_TLS_PK'),
+                    // 'local_cert' => env('REVERB_TLS_CERT'),
+                    // 'local_pk' => env('REVERB_TLS_PK'),
                     'verify_peer' => env('REVERB_TLS_VERIFY_PEER', false),
                 ],
             ],
